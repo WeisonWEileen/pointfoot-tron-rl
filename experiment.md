@@ -17,6 +17,6 @@ robot = Robot(RobotType.PointFoot, is_sim=True)
 ### Mean episode length reach 270 after adding ```lin_vel_z```
 ![image-20241208102916680](./assets/image-20241208102916680.png)
 
-checkpoint of ```model_36000.pt```
+checkpoint of ```model_35000.pt```
 ![video](./assets/35000_checkpoint.mp4)
 
