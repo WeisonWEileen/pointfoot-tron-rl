@@ -1154,3 +1154,5 @@ class PointFoot:
 
     def _reward_survival(self):
         return (~self.reset_buf).float()
+
+    

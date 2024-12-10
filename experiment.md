@@ -11,12 +11,32 @@ output dim: 6 dim action
 ```
 robot = Robot(RobotType.PointFoot, is_sim=True)
 ```
-###  rewards which exist in ```legged_gym``` but not exist in the repo that TA offer
+####  rewards which exist in ```legged_gym``` but not exist in the repo that TA offer
 ![image-20241208102741868](./assets/image-20241208102741868.png)
+
 # experiment after adding ```lin_vel_z``` to the reward function
-### Mean episode length reach 270 after adding ```lin_vel_z```
+### reward += ```lin_vel_z```
+
 ![image-20241208102916680](./assets/image-20241208102916680.png)
 
+#### checkpoint of 35000
 checkpoint of ```model_36000.pt```
-![video](./assets/35000_checkpoint.mp4)
+![video](./assets/lin_z_reward_35000.gif)
+we can notice that tron cannot **stand still** and it **rotates** when there is no command
 
+export as policy01.onnx
+### reward += 
+-  ```_reward_orientation``` 
+- ```_reward_stand_still```
+if does not work, when training it does not converge
+
+export as policy02.onnx
+
+###  reward += 
+- ```unbalance_feet_air_time```
+- ```unbalance_feet_height```
+-  ```no_fly```
+- ```tracking_lin_vel```
+- ```tracking_ang_vel```
+
+export as policy03.onnx
