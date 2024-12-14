@@ -40,3 +40,9 @@ export as policy02.onnx
 - ```tracking_ang_vel```
 
 export as policy03.onnx
+
+the results shows that the robot crawl forward. The base of tron is two low. So I increase change the scale of reward base_height from ```-2``` to ```-10```
+
+### scale of reward base_height from ```-2``` to ```-10```
+it performs well.
+export as policy04.onnx
